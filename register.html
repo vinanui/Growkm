@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Akun - Growkm</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="GrowKm Logo">
+                <span>Growkm</span>
+            </div>
+        </header>
+
+        <main class="registration-container">
+            <div class="registration-box">
+                <img src="assets/images/logo.png" alt="GrowKm Logo" class="center-logo">
+                <h1>Pendaftaran Akun</h1>
+                <p class="subtitle">Yuk, daftarkan akunmu sekarang juga!</p>
+
+                <div class="google-signup">
+                    <button class="google-btn">
+                        <img src="https://www.google.com/favicon.ico" alt="Google Icon">
+                        Daftar dengan Google
+                    </button>
+                </div>
+
+                <div class="divider">
+                    <span>atau</span>
+                </div>
+
+                <form id="registrationForm" onsubmit="return validateForm(event)">
+                    <div class="form-group">
+                        <label for="firstName">Nama Depan <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Nama Belakang <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp">Nomor WhatsApp <span class="required">*</span></label>
+                        <input type="tel" id="whatsapp" name="whatsapp" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password <span class="required">*</span></label>
+                        <div class="password-input">
+                            <input type="password" id="password" name="password" required>
+                            <button type="button" class="toggle-password" onclick="togglePassword('password')">
+                                <img src="assets/images/eye.svg" alt="Toggle password">
+                            </button>
+                        </div>
+                        <small>Minimal 6 karakter, 1 huruf besar, 1 huruf kecil dan 1 angka</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Konfirmasi Password <span class="required">*</span></label>
+                        <div class="password-input">
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <button type="button" class="toggle-password" onclick="togglePassword('confirmPassword')">
+                                <img src="assets/images/eye.svg" alt="Toggle password">
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            Saya setuju dengan <a href="#">Syarat & Ketentuan</a> dan <a href="#">Kebijakan Privasi</a>
+                        </label>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Saya ingin berlangganan Newsletter.</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Daftar</button>
+                </form>
+
+                <div class="login-link">
+                    Sudah punya akun? <a href="login.html">Masuk Sekarang</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html> 
